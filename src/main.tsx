@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App.tsx"
+import "./index.css"
+import SnakeContextProvider from "./snake-context.tsx"
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <SnakeContextProvider width={800} height={400} piecePixels={40}>
+      <App />
+    </SnakeContextProvider>
+  </React.StrictMode>
 )
